@@ -27,6 +27,12 @@ This README describes how to create the project, if you want to try doing it you
 
   * If you prefer, you can add it by using a dynamic framework or using Cocoapods.
 
+1. If you want a simpler introduction to each piece of this demonstration, see these related repos:
+
+  * [demo_swift_alamofire](https://github.com/joelparkerhenderson/demo_swift_alamofire)
+  * [demo_swift_objectmapper](https://github.com/joelparkerhenderson/demo_swift_objectmapper)
+  * [demo_swift_realm](https://github.com/joelparkerhenderson/demo_swift_realm)
+
 ## Add Alamofire
 
 1. Edit `ViewController.swift`.
