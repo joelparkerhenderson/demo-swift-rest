@@ -200,8 +200,8 @@ This README describes how to create the project, if you want to try doing it you
 
 ## Tracking
 
-* Package: demo_swift_alamofire
-* Version: 1.0.6
+* Package: demo_swift_rest
+* Version: 1.0.8
 * Created: 2016-05-30
 * Updated: 2016-06-02
 * License: GPL
