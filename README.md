@@ -141,7 +141,7 @@ This README describes how to create the project, if you want to try doing it you
         import ObjectMapper
         import RealmSwift
 
-        class Item: Object, Mappable {
+        public class Item: Object, Mappable {
 
           // Create some properties that correspond to the
           // key fields in the JSON data that we will fetch.
