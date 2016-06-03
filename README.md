@@ -1,10 +1,15 @@
-# Demo Swift Alamofire
+# Demo Swift REST
 
-This is a demonstration of Apple iOS Xcode using the Swift language to create a project with the Alamofire networking framework.
+This is a demonstration of:
+
+  * Apple iOS Xcode
+  * The Swift programming language
+  * How to create a simple REST app
+  * How to fetch data by using [Alamofire](https://github.com/Alamofire/Alamofire)
+  * How to parse JSON by using [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
+  * How to save objects by using [Realm](https://github.com/realm/realm-cocoa)
 
 This README describes how to create the project, if you want to try doing it yourself.
-
-To learn more about Swift and Alamofire, see the official documentation for [Alamofire](https://github.com/Alamofire/Alamofire)
 
 ## How to create the project
 
@@ -16,7 +21,7 @@ To learn more about Swift and Alamofire, see the official documentation for [Ala
 
   * Need help? See our repo [demo_swift_text_view](https://github.com/joelparkerhenderson/demo_swift_text_view).
 
-1. Add Alamofire to the project.
+1. Add dependencies for Alamofire, ObjectMapper, and Realm.
 
   * To add Alamofire as a dependency, we prefer using Carthage.
 
@@ -155,7 +160,7 @@ To learn more about Swift and Alamofire, see the official documentation for [Ala
 
         }
 
-## Add Realm database
+## Upgrade the view to use Realm
 
 1. Edit `ViewController.swift`
 
@@ -185,11 +190,12 @@ To learn more about Swift and Alamofire, see the official documentation for [Ala
 		  …
 		}
 
+1. Run the app. The screen shows the item URL, which is "https://httpbin.org/get".
 
 ## Tracking
 
 * Package: demo_swift_alamofire
-* Version: 1.0.5
+* Version: 1.0.6
 * Created: 2016-05-30
 * Updated: 2016-06-02
 * License: GPL
