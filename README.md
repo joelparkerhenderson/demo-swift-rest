@@ -2,11 +2,17 @@
 
 This is a demonstration of:
 
-  * Apple iOS Xcode
-  * The Swift programming language
-  * How to create a simple REST app
+ * The [Swift](http://swift.org) programming language with
+    [Apple](http://apple.com)
+    [iOS](http://www.apple.com/ios/)
+    [Xcode](https://developer.apple.com/xcode/)
+
+  * How to create a simple [REST](https://en.wikipedia.org/wiki/REST) app
+
   * How to fetch data by using [Alamofire](https://github.com/Alamofire/Alamofire)
+
   * How to parse JSON by using [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
+
   * How to save objects by using [Realm](https://github.com/realm/realm-cocoa)
 
 This README describes how to create the project, if you want to try doing it yourself.
