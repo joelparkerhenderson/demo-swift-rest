@@ -19,7 +19,7 @@ This README describes how to create the project, if you want to try doing it you
 
 ## How to create the project
 
-1. Launch Xcode and create a new project. We call ours "Demo Swift Alamofire".
+1. Launch Xcode and choose to create a new project with a single view application for iOS. We call ours "Demo Swift Alamofire".
 
   * Need help? See our repo [demo_swift_hello_world](https://github.com/joelparkerhenderson/demo_swift_hello_world).
 
@@ -58,13 +58,13 @@ This README describes how to create the project, if you want to try doing it you
               .validate()
               .responseString { response in
                  self.demoTextView.text = response.result.value
-               }
-             }
+            }
           }
+          
 		  …
 		}
 
-1. Verify Alamofire works by runing the app. The screen shows the response result value string, which looks something like this.
+1. Verify Alamofire works by running the app. The screen shows the response result value string, which looks something like this.
 
         {
           "args": {},
@@ -128,9 +128,9 @@ This README describes how to create the project, if you want to try doing it you
               .responseString { response in
                 let item = Mapper<Item>().map(response.result.value)
                 self.demoTextView.text = item!.url!
-              }
             }
           }
+          
 		  …
 		}
 
@@ -140,14 +140,14 @@ This README describes how to create the project, if you want to try doing it you
 
 1. Edit `Models/Item.swift`.
 
-1. Add code to import RealmSwift, and add public init methods, and make the properties dynamic and default to nil.
+1. Add code to import RealmSwift, and add init methods, and make the properties dynamic and default to nil.
 
         import UIKit
         import Alamofire
         import ObjectMapper
         import RealmSwift
 
-        public class Item: Object, Mappable {
+        class Item: Object, Mappable {
 
           // Create some properties that correspond to the
           // key fields in the JSON data that we will fetch.
@@ -155,12 +155,12 @@ This README describes how to create the project, if you want to try doing it you
           dynamic var url: String? = nil
 
           // Realm init
-          convenience public init(data: [String: AnyObject]) {
+          convenience init(data: [String: AnyObject]) {
             self.init()
           }
 
           // Implement Mappable
-          required convenience public init?(_ map: Map) {
+          required convenience init?(_ map: Map) {
             self.init()
           }
 
@@ -176,7 +176,7 @@ This README describes how to create the project, if you want to try doing it you
 
 1. Edit `ViewController.swift`
 
-1. Add code to open Realm, and write and item, and read an item.
+1. Add code to open Realm, and write an item, and read an item.
 
 
         class ViewController: UIViewController {
@@ -196,9 +196,9 @@ This README describes how to create the project, if you want to try doing it you
                 }
                 // Read the item from the database
                 self.demoTextView.text = realm.objects(Item).first!.url!
-              }
             }
           }
+         
 		  …
 		}
 
