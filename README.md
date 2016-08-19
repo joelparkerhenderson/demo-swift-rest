@@ -54,7 +54,8 @@ This README describes how to create the project, if you want to try doing it you
 
           override func viewDidLoad() {
             super.viewDidLoad()
-            Alamofire.request(.GET, "https://httpbin.org/get")
+            
+			Alamofire.request(.GET, "https://httpbin.org/get")
               .validate()
               .responseString { response in
                  self.demoTextView.text = response.result.value
@@ -85,7 +86,6 @@ This README describes how to create the project, if you want to try doing it you
 
 1. Create a model called "Item" that implements the ObjectMappable interface:
 
-        import Foundation
         import ObjectMapper
 
         class Item: Mappable {
@@ -123,7 +123,8 @@ This README describes how to create the project, if you want to try doing it you
 
           override func viewDidLoad() {
             super.viewDidLoad()
-            Alamofire.request(.GET, "https://httpbin.org/get")
+            
+			Alamofire.request(.GET, "https://httpbin.org/get")
               .validate()
               .responseString { response in
                 let item = Mapper<Item>().map(response.result.value)
@@ -142,7 +143,6 @@ This README describes how to create the project, if you want to try doing it you
 
 1. Add code to import RealmSwift, and add public init methods, and make the properties dynamic and default to nil.
 
-        import UIKit
         import Alamofire
         import ObjectMapper
         import RealmSwift
@@ -179,24 +179,33 @@ This README describes how to create the project, if you want to try doing it you
 1. Add code to open Realm, and write and item, and read an item.
 
 
-        class ViewController: UIViewController {
+		import UIKit
+		import Alamofire
+		import ObjectMapper
+		import RealmSwift
+		
+		class ViewController: UIViewController {
 
           @IBOutlet weak var demoTextView: UITextView!
 
           override func viewDidLoad() {
             super.viewDidLoad()
-            let realm = try! Realm()
+            
+			let realm = try! Realm()
             Alamofire.request(.GET, "https://httpbin.org/get")
               .validate()
               .responseString { response in
                 let item = Mapper<Item>().map(response.result.value)
-                // Write the item to the database
+                
+				// Write the item to the database
                 try! realm.write {
                   realm.add(item!)
                 }
-                // Read the item from the database
-                self.demoTextView.text = realm.objects(Item).first!.url!
-              }
+				
+				// Call and safely unwrap the url from the database, then assign to the textView
+				if let url = realm.objects(Item).first?.url {
+					self.demoTextView.text = url
+				}
             }
           }
 		  …
