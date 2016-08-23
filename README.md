@@ -1,5 +1,7 @@
 # Demo Swift REST
 
+<img src="README.png" alt="REST" style="width: 100%;"/>
+
 This is a demonstration of:
 
  * The [Swift](http://swift.org) programming language with
@@ -19,7 +21,7 @@ This README describes how to create the project, if you want to try doing it you
 
 ## How to create the project
 
-1. Launch Xcode and create a new project. We call ours "Demo Swift Alamofire".
+1. Launch Xcode and create a new project. We call ours "Demo Swift REST".
 
   * Need help? See our repo [demo_swift_hello_world](https://github.com/joelparkerhenderson/demo_swift_hello_world).
 
