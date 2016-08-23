@@ -31,7 +31,7 @@ This README describes how to create the project, if you want to try doing it you
 
 1. Add dependencies for Alamofire, ObjectMapper, and Realm.
 
-  * To add Alamofire as a dependency, we prefer using Carthage.
+  * To add these, we prefer using Carthage.
 
   * If you prefer, you can add it by using a dynamic framework or using Cocoapods.
 
