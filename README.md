@@ -19,6 +19,15 @@ This is a demonstration of:
 
 This README describes how to create the project, if you want to try doing it yourself.
 
+This git repository has several git branches, so be sure to get the branch you want:
+
+  * `swift-4`: Swift version 4, Xcode version 9, iOS version 11. These are beta.
+
+  * `swift-3`: Swift version 3, Xcode version 8, iOS version 10.
+
+  * `swift-2`: Swift version 2, Xcode version 7, iOS version 9.
+
+
 ## How to create the project
 
 1. Launch Xcode and create a new project. We call ours "Demo Swift REST".
