@@ -49,10 +49,12 @@ Add Alamofire, ObjectMapper, and Realm. We suggest using Carthage or Cocoapods.
 
   * Carthage Cartfile:
 
+    ```
     github "Alamofire/Alamofire"
     github "Hearst-DD/ObjectMapper" ~> 2.2
     github "realm/realm-cocoa"
-
+    ```
+    
   * [Help](doc/setup/add_carthage_frameworks.md)
 
 If you want a simpler introduction to each piece of this demo, then see these related repos:
