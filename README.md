@@ -35,7 +35,7 @@ If you clone this repo, then be aware that there are multiple git branches, so p
 
 Launch Xcode and create a new project. 
 
-  * We call it "Demo Swift REST" and we use the template "Single View Application".
+  * Use the iOS template "Single View Application" and Project Name "Demo Swift REST".
 
   * [Help](doc/setup/create_a_new_xcode_project.md)
         
