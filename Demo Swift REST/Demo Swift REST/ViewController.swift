@@ -6,19 +6,21 @@ import RealmSwift
 class ViewController: UIViewController {
     
     @IBOutlet weak var demoTextView: UITextView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let realm = try! Realm()
-        Alamofire.request(.GET, "https://httpbin.org/get")
+        
+        Alamofire.request("https://httpbin.org/get")
             .validate()
             .responseString { response in
-                let item = Mapper<Item>().map(response.result.value)
+                self.demoTextView.text = response.result.value
+                let item = Mapper<Item>().map(JSONString: response.result.value!)!
+                self.demoTextView.text = item.url!
                 
                 // Write the item to the database
                 try! realm.write {
-                    realm.add(item!)
+                    realm.add(item)
                 }
                 
                 // Call and safely unwrap the url from the database, then assign to the textView
@@ -27,5 +29,10 @@ class ViewController: UIViewController {
                 }
         }
     }
-    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
 }
